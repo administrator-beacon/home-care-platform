@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     app_name: str = "Home Care Platform"
-    database_url: str = "postgresql+psycopg2://postgres:postgres@localhost:5432/home_care"
+    database_url: str = "sqlite:///./dev.db"
     jwt_secret_key: str = "change-me"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
